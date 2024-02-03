@@ -30,5 +30,5 @@ class Post(models.Model):
     stats_likes_count = models.BigIntegerField()
     stats_views_count = models.BigIntegerField()
     stats_comments_count = models.BigIntegerField()
-    media = models.ForeignKey(Media, on_delete=models.CASCADE, related_name='posts')
+    media = models.ManyToManyField('Media', related_name='posts')
 
